@@ -1,0 +1,7 @@
+{
+"To":"thaii.queiroz95@gmail.com",
+"From":"thaii.queiroz95@gmail.com",
+"Password":"ygek enbf orjf ccpg",
+"Porta":587,
+"Host":"smtp.gmail.com",
+}

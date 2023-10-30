@@ -64,7 +64,7 @@ namespace Cotacao
 
 
                                 MailConfig mailConfig = new MailConfig();
-                                mailConfig.DisparaMail("thaii.queiroz95@gmail.com", texto, "Preço máximo atingido");
+                                mailConfig.DisparaMail(texto, "Preço máximo atingido");
 
                                 Console.WriteLine("\r\nO ativo: " + ticker + " atingiu a cotação MÁXIMA configurada ! \r\nE-mail enviado! \r\n***");
 
@@ -81,7 +81,7 @@ namespace Cotacao
 
 
                                 MailConfig mailConfig = new MailConfig();
-                                mailConfig.DisparaMail("thaii.queiroz95@gmail.com", texto, "Preço minímo atingido");
+                                mailConfig.DisparaMail(texto, "Preço minímo atingido");
 
                                 Console.WriteLine("\r\nO ativo: " + ticker + " atingiu a cotação MÍNIMA configurada ! \r\nE-mail enviado! \r\n***");
 
@@ -112,9 +112,9 @@ namespace Cotacao
         public static void Main(string[] args)
 
         {
-            string acao = args[0];
-            double Preco_Venda = Convert.ToDouble(args[1]);
-            double Preco_Compra = Convert.ToDouble(args[2]);
+            string acao = "PETR4"; //"args[0];
+            double Preco_Venda = 37.50; //Convert.ToDouble(args[1]);
+            double Preco_Compra = 36.00; //Convert.ToDouble(args[2]);
 
             RunAsync(acao, Preco_Venda, Preco_Compra).Wait();
             Console.ReadKey();
