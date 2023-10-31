@@ -41,7 +41,7 @@ Para que o programa seja executado é necessário informar três parâmetros, se
 Queremos monitorar a cotação de PETR4, e queremos vender o ativo, caso este atinga ou ultrapasse a cotação de R$37,00. Bem como desejamos comprar o ativo, caso este atinga uma cotação igual ou inferior a R$ 36,00.
 Para isso, vamos executar o seguinte comando:
 ```
-MonitorStocks.exe PETR4 37,00 36,00
+MonitorStocks.exe "PETR4" 37,00 36,00
 ```
 Sendo assim, enquanto o programa estiver rodando, este irá enviar os e-mails de alerta de compra ou venda de acordo com os parametros informados no inicio da execução do programa.
 
