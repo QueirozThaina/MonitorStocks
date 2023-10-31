@@ -66,8 +66,6 @@ namespace Cotacao
                                 MailConfig mailConfig = new MailConfig();
                                 mailConfig.DisparaMail(texto, "Preço máximo atingido");
 
-                                Console.WriteLine("\r\nO ativo: " + ticker + " atingiu a cotação MÁXIMA configurada ! \r\nE-mail enviado! \r\n***");
-
                             }
                             else if (resposta.results[0].regularMarketPrice <= Preco_Compra)
                             {
@@ -83,12 +81,6 @@ namespace Cotacao
                                 MailConfig mailConfig = new MailConfig();
                                 mailConfig.DisparaMail(texto, "Preço minímo atingido");
 
-                                Console.WriteLine("\r\nO ativo: " + ticker + " atingiu a cotação MÍNIMA configurada ! \r\nE-mail enviado! \r\n***");
-
-                            }
-                            else
-                            {
-                                Console.WriteLine("O ativo não atingiu os Stops configurados");
                             }
 
 
