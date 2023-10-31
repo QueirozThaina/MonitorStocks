@@ -18,10 +18,8 @@ dotnet add package Newtonsoft.Json
 ```
 
 # Instalação
-O projeto pode ser compilado via Visual Basic em: <em>Compilação > Compilar Solução</em>, ou via promp de comando, através do comando:
-```
-csc Program.cs
-```
+O projeto pode ser compilado via Visual Basic em: <em>Compilação > Compilar Solução</em>.
+
 Após compilar o projeto duas pastas serão criadas no diretório do projeto. O executável ficará disponivel no diretório: 
 ```
 C:\...\MonitorStocks\bin\Debug\net7.0\MonitorStocks.exe
