@@ -39,6 +39,7 @@ namespace Cotacao
 
                         while (true)
                         {
+                            response = client.GetAsync("https://brapi.dev/api/quote/" + ticker + "?token=unSqMAUK1Ab2xtcz72LciK").Result;
                             var resultado = response.Content.ReadAsStringAsync().Result;
                             Rootobject resposta = JsonConvert.DeserializeObject<Rootobject>(resultado);
 
@@ -50,6 +51,8 @@ namespace Cotacao
                             double Maximo = Math.Round(resposta.results[0].regularMarketDayHigh, 2);
                             double Preco_Ultimo = Math.Round(resposta.results[0].regularMarketPrice, 2);
                             string Horario_atualização = resposta.results[0].regularMarketTime;
+
+                            Console.WriteLine(ticker + " - Preço Último: " + Preco_Ultimo);
 
                             if (resposta.results[0].regularMarketPrice >= Preco_Venda)
                             {
@@ -86,7 +89,7 @@ namespace Cotacao
 
                         }
 
-
+                        await Task.Delay(5000);
                     }
                 }
                 catch (Exception ex)
@@ -104,9 +107,9 @@ namespace Cotacao
         public static void Main(string[] args)
 
         {
-            string acao = "PETR4"; //"args[0];
-            double Preco_Venda = 37.50; //Convert.ToDouble(args[1]);
-            double Preco_Compra = 36.00; //Convert.ToDouble(args[2]);
+            string acao = args[0];
+            double Preco_Venda = Convert.ToDouble(args[1]);
+            double Preco_Compra = Convert.ToDouble(args[2]);
 
             RunAsync(acao, Preco_Venda, Preco_Compra).Wait();
             Console.ReadKey();
